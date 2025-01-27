@@ -1,0 +1,120 @@
+language: en
+tests:
+  - sentences:
+      - "set the AVR's source to CD"
+      - "change the AVR's source to CD"
+      - "switch the AVR's source to CD"
+      
+      - "set the source of AVR to CD"
+      - "change the source of AVR to CD"
+      - "switch the source of AVR to CD"
+
+      - "set the AVR's input to CD"
+      - "change the AVR's input to CD"
+      - "switch the AVR's input to CD"
+
+      - "set the input of AVR to CD"
+      - "change the input of AVR to CD"
+      - "switch the input of AVR to CD"
+
+      - "set CD as the AVR's input"
+      - "change to CD as the AVR's input"
+      - "switch to CD as the AVR's input"
+
+      - "set CD as the AVR's source"
+      - "select CD as the AVR's source"
+      - "change to CD as the AVR's source"
+      - "switch to CD as the AVR's source"
+
+      - "set AVR to CD"
+      - "change AVR to CD"
+      - "switch AVR to CD"
+      
+      - "select CD on AVR"
+      - "set CD on AVR"
+
+      - "change to CD on AVR"
+      - "switch to CD on AVR"
+    intent:
+      name: HassSelectSource
+      slots:
+        name: "AVR"
+        source: "CD"
+    response: "Source selected"
+  - sentences:
+      - "change source to CD"
+      - "set source to CD"
+      - "switch source to CD"
+
+      - "change input to CD"
+      - "set input to CD"
+      - "switch input to CD"
+
+      - "change the source to CD"
+      - "set the source to CD"
+      - "switch the source to CD"
+
+      - "change the input to CD"
+      - "set the input to CD"
+      - "switch the input to CD"
+
+      - "select CD as the input"
+      - "select CD as the source"
+
+      - "select CD as input"
+      - "select CD as source"
+      - "set CD as input"
+      - "set CD as source"
+
+      - "select CD"
+    intent:
+      name: HassSelectSource
+      context:
+        area: Living Room
+      slots:
+        area: "Living Room"
+        source: "CD"
+    response: "Source selected"
+  - sentences:
+      - "set the living room's source to CD"
+      - "change the living room's source to CD"
+      - "switch the living room's source to CD"
+      
+      - "set the source of the living room to CD"
+      - "change the source of the living room to CD"
+      - "switch the source of the living room to CD"
+
+      - "set the living room's input to CD"
+      - "change the living room's input to CD"
+      - "switch the living room's input to CD"
+
+      - "set the input of living room to CD"
+      - "change the input of living room to CD"
+      - "switch the input of living room to CD"
+
+      - "set CD as the living room's input"
+      - "change to CD as the living room's input"
+      - "switch to CD as the living room's input"
+
+      - "set CD as the living room's source"
+      - "select CD as the living room's source"
+      - "change to CD as the living room's source"
+      - "switch to CD as the living room's source"
+
+      - "set living room to CD"
+      - "change living room to CD"
+      - "switch living room to CD"
+      
+      - "select CD in the living room"
+      - "set CD in the living room"
+
+      - "change to CD in living room"
+      - "switch to CD in living room"
+    intent:
+      name: HassSelectSource
+      context:
+        area: Living Room
+      slots:
+        area: "Living Room"
+        source: "CD"
+    response: "Source selected"

@@ -431,6 +431,23 @@ HassSetVolume:
       description: "Volume level from 0 to 100"
       required: true
 
+HassSelectSource:
+  supported: true
+  domain: media_player
+  description: "Selects the source of a media player"
+  slots:
+    name:
+      description: "Name of a device or entity"
+      required: false
+    area:
+      description: "Name of an area"
+      required: false
+    source:
+      description: "Name of a source"
+      required: true
+
+
+
 # -----------------------------------------------------------------------------
 # timers
 # -----------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+language: en
+intents:
+  HassSetVolume:
+    data:
+      - sentences:
+          - "select {source} on <name>"
+          - "[<set>] <name>[['s] <source>] to {source}"
+          - "<set> [<the>] <source> (of|on) <name> to {source}"
+          - "select {source} as [<the>] source (of|on) <name>"
+        expansion_rules:
+          set: "(set|change|switch)"
+          source: "(source|input|input source)"
+        requires_context:
+          domain: media_player
+      - sentences:
+          - "(set|select) {source} [as [<the>] <source>] "
+          - "<set> [[<the>]<source>] to {source}"
+        requires_context:
+          area:
+            slot: true
+      - sentences:
+          - "select {source} in <area>"
+          - "[<set>] <area>[['s] <source>] to {source}"
+          - "<set> [<the>] <source> (of|in) <area> to {source}"
+          - "select {source} as [<the>] <source> (of|in) <area>"
